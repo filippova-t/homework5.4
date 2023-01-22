@@ -11,3 +11,36 @@ public class Application {
 	}
 
 }
+
+/*
+1 способ:
+class AnotherTask extends Thread{
+@Override
+public void run () {
+...
+}
+
+public class Thread1 {
+public static void main(String[] args) {
+AnotherTask thread = new AnotherTask();
+thread.start();
+}
+}
+
+2 способ:
+class AnotherRun implements Runnable {
+@Override
+public void run () {
+...
+}
+
+public class Thread2 {
+public static void main(String[] args) {
+AnotherRun anotherRun = new AnotherRun();
+Thread childThread = new Thread (anotherRun);
+childThread.start();
+}
+}
+
+
+ */
